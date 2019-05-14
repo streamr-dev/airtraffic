@@ -3,8 +3,6 @@ const config = require('./config')
 const store = new AircraftStore({
     timeout: 60000 // remove airplane from store if we haven't seen it for 1 minutes
 })
-  
-
 const StreamrClient = require('streamr-client')
 const client = new StreamrClient({
     // See below for more options
