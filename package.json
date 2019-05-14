@@ -1,0 +1,19 @@
+{
+  "name": "streamr-airtraffic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mode-s-aircraft-store": "^1.0.1",
+    "mode-s-decoder": "^1.0.1",
+    "mode-s-demodulator": "^1.0.1",
+    "rtl-sdr": "^0.1.4",
+    "streamr-client": "^1.0.2"
+  }
+}
