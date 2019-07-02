@@ -1,4 +1,3 @@
-
 require('dotenv').config()
 
 const streamrApiKey = process.env.STREAMR_API_KEY

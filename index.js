@@ -4,9 +4,7 @@ const store = require('./tools/store')
 
 var rtlsdr = require('rtl-sdr')
 
-
 setInterval(store.publishStore, 1000)
-
 
 // Index of the device we want to use
 const deviceIndex = 0
@@ -114,10 +112,11 @@ rtlsdr.read_async(dev, onData, onEnd, bufNum, bufLen)
 function onData (data, size) {
     demodulator.process(data, size, function (message) {
         store.store.addMessage(message)
-      })
+//        console.log('________________________')
+//        console.log(message)
+    })
 }
 
-
 function onEnd () {
-  console.log('onEnd')
+    console.log('onEnd')
 }
