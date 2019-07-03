@@ -15,6 +15,7 @@
     "mode-s-decoder": "^1.0.1",
     "mode-s-demodulator": "^1.0.1",
     "rtl-sdr": "^0.1.4",
-    "streamr-client": "^1.0.2"
+    "streamr-client": "^2.0.3",
+    "streamr-client-protocol": "^2.1.0"
   }
 }
