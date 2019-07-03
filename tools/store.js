@@ -13,21 +13,24 @@ const client = new StreamrClient({
 
 const publishStore = () => {
     store.getAircrafts().forEach(function (aircraft) {
-	if (Date.now() - aircraft.seen < 5000) {
+		if (Date.now() - aircraft.seen < 2500) {
        	    const toStream = {
-           	id: aircraft.icao,
+           		id: aircraft.icao,
             	altitude: aircraft.altitude,
-           	speed: aircraft.speed,
+           		speed: aircraft.speed,
             	heading: aircraft.heading,
             	latitude: aircraft.lat,
             	longitude: aircraft.lng,
             	callsign: aircraft.callsign,
             	count: aircraft.count,
             	seen: aircraft.seen
+			}
+			if (client.connection.state === 'disconnected') {
+                client.connect()
             }
             client.publish(config.streamId, toStream)
-	    console.log(toStream.id)
-	}
+	    	console.log(toStream.id)
+		}
     })
 }
 
